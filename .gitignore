@@ -1,0 +1,15 @@
+/*
+!README.md
+!.gitignore
+!/app
+app/*
+!app/code/
+app/code/*
+!app/code/community
+app/code/community/*
+!app/code/community/Magma
+!app/etc
+app/etc/*
+!app/etc/modules
+app/etc/modules/*
+!app/etc/modules/Magma_Slider.xml

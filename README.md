@@ -1,0 +1,1 @@
+# Magento Hero Slider
