@@ -1,6 +1,8 @@
 /*
 !README.md
 !.gitignore
+!composer.json
+!phpspec.yml
 !/app
 app/*
 !app/code/
