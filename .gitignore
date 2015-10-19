@@ -3,6 +3,7 @@
 !.gitignore
 !composer.json
 !phpspec.yml
+!spec/
 !/app
 app/*
 !app/code/

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Magma_Slider>
+            <version>0.1.0</version>
+        </Magma_Slider>
+    </modules>
+    <global>
+        <blocks>
+            <magma_slider>
+                <class>Magma_Slider_Block</class>
+            </magma_slider>
+        </blocks>
+    </global>
+</config>
