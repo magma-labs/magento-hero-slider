@@ -34,6 +34,12 @@ if($installer->getConnection()->isTableExists($installer->getTable('slider/galle
 }
 
 /**
+ * [$table description]
+ * @var [type]
+ */
+$table = $installer->getConnection()
+
+/**
  * Ending setup step
  */
 $installer->endSetup();
