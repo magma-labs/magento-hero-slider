@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Magma_Slider>
-            <version>0.1.0</version>
+            <version>0.0.1</version>
         </Magma_Slider>
     </modules>
     <global>
@@ -11,5 +11,26 @@
                 <class>Magma_Slider_Block</class>
             </magma_slider>
         </blocks>
+        <resources>
+            <magma_slider_setup>
+                <setup>
+                    <module>Magma_Slider</module>
+                    <class>Magma_Slider_Model_Resource_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </magma_slider_setup>
+            <magma_slider_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </magma_slider_write>
+            <magma_slider_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </magma_slider_read>
+        </resources>
     </global>
 </config>
