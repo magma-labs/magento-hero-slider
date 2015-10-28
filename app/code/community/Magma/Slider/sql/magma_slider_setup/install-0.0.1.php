@@ -38,6 +38,14 @@ if($installer->getConnection()->isTableExists($installer->getTable('slider/galle
  * @var [type]
  */
 $table = $installer->getConnection()
+			->newTable($installer->getTable('slider/slider'))
+			->addColumn('id', Varien_Db_Ddl_Table::TYPE_SMALLINT, null, array(
+				'identity' => true,
+				'nullable' => false,
+				'primary' => true,
+			), 'Slider id')
+			->setComment('Slider table');
+
 
 /**
  * Ending setup step
