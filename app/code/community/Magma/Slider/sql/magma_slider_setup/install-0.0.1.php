@@ -56,6 +56,26 @@ $table = $installer->getConnection()
 			), 'Slider is active')
 			->setComment('Slider table');
 
+/**
+ * [$table description]
+ * @var [type]
+ */
+$table = $installer->getConnection()
+			->newTable($installer->getTable('slider/options'))
+			->addColumn('id', Varien_Db_Ddl_Table::TYPE_SMALLINT, null, array(
+				'identity' => true,
+				'nullable' => false,
+				'primary' => true,
+			), 'Slider Options id')
+			->addColumn('slider_id', Varien_Db_Ddl_Table::TYPE_SMALLINT, null, array(
+				'nullable' => false,
+			), 'Slider id')
+			->addColumn('mode', Varien_Db_Ddl_Table::TYPE_TEXT, 255, array(
+				'nullable' => false,
+				'default' => 'horizontal',
+			), 'Column comment')
+			->setComment('Slider options');
+
 
 /**
  * Ending setup step
