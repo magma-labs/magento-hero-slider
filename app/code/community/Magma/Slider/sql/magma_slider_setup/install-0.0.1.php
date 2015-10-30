@@ -55,6 +55,7 @@ $table = $installer->getConnection()
 				'default' => '1',	
 			), 'Slider is active')
 			->setComment('Slider table');
+$installer->getConnection()->createTable($table);
 
 /**
  * [$table description]
@@ -73,9 +74,25 @@ $table = $installer->getConnection()
 			->addColumn('mode', Varien_Db_Ddl_Table::TYPE_TEXT, 255, array(
 				'nullable' => false,
 				'default' => 'horizontal',
-			), 'Column comment')
+			), 'Slider mode')
+			->addColumn('speed', Varien_Db_Ddl_Table::TYPE_INTEGER, 11, array(
+				'nullable' => false,
+				'default' => 500,	
+			), 'Slide changes speed')
+			->addColumn('start_slide', Varien_Db_Ddl_Table::TYPE_INTEGER, 11, array(
+				'nullable' => false,
+				'default' => '0',
+			), 'Slide to start slider')
+			->addColumn('random_start', Varien_Db_Ddl_Table::TYPE_SMALLINT, null, array(
+				'nullable' => false,
+				'default' => '0',
+			), 'Is slider random start')
+			->addColumn('infinite_loop', Varien_Db_Ddl_Table::TYPE_SMALLINT, null, array(
+				'nullable' => false,
+				'default' => '1',
+			), 'Is slider infinite loop')
 			->setComment('Slider options');
-
+$installer->getConnection()->createTable($table);
 
 /**
  * Ending setup step
