@@ -91,6 +91,18 @@ $table = $installer->getConnection()
 				'nullable' => false,
 				'default' => '1',
 			), 'Is slider infinite loop')
+			->addColumn('hide_control_on_end', Varien_Db_Ddl_Table::TYPE_SMALLINT, null, array(
+				'nullable' => false,
+				'default' => '0',
+			), 'Hide control navigation in the last item')
+			->addColumn('video', Varien_Db_Ddl_Table::TYPE_SMALLINT, null, array(
+				'nullable' => false,
+				'default' => '0',
+			), 'Any sluider include video')
+			->addColumn('responsive', Varien_Db_Ddl_Table::TYPE_SMALLINT, null, array(
+				'nullable' => false,
+				'default' => '1',
+			), 'Is responsive slider')
 			->setComment('Slider options');
 $installer->getConnection()->createTable($table);
 
